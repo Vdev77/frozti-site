@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Frozti - Gallery & News</title>
+  <link rel="icon" href="images/favicon (2).png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script> <!-- Link to JS for parallax -->
+  <style>
+    /* Additional internal styles */
+    .gallery-header {
+      background: var(--gamboge);
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .gallery-grid {
+      padding: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      background: var(--offwhite);
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-section, .video-section {
+      padding: 40px;
+      background: var(--desert-sand);
+    }
+
+    .news-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .news-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .news-item img {
+      width: 150px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .news-item a {
+      color: var(--gamboge);
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .news-item a:hover {
+      text-decoration: underline;
+      color: #a96e08;
+    }
+
+    .insta-embed-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .insta-embed-wrapper blockquote.instagram-media {
+      max-width: 100%;
+      width: 100%;
+      margin: auto;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+
+    .insta-embed-wrapper blockquote.instagram-media:hover {
+      transform: scale(1.02);
+    }
+
+    .back-home {
+      text-align: center;
+      padding: 40px;
+      background: var(--offwhite);
+    }
+
+    .back-home a {
+      text-decoration: none;
+      background: var(--gamboge);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .back-home a:hover {
+      background: #c4810b;
+    }
+
+    @media screen and (max-width: 768px) {
+      .news-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .news-item img {
+        width: 100%;
+        height: auto;
+      }
+
+      .insta-embed-wrapper blockquote.instagram-media {
+        height: auto;
+      }
+    }
+
+    /* Parallax compatibility */
+    section {
+      transition: transform 0.5s ease-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/logo.png" alt="Frozti Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#founders">Founders</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Parallax wrapper section -->
+  <section class="gallery-header">
+    <h1>Gallery & News</h1>
+    <p>Moments captured, scoops celebrated, and smiles served fresh!</p>
+  </section>
+
+  <section class="gallery-grid">
+    <img src="images/Inaguration.jpeg" alt="Inaguration" />
+    <img src="images/Customers 1.jpeg" alt="Customers 1" />
+    <img src="images/Customers 2.jpeg" alt="Customers 2" />
+    <img src="images/Thukkappan.jpeg" alt="Kids" />
+    <img src="images/Shop Interior/Shop 4.jpeg" alt="Shop 4" />
+  </section>
+
+  <!-- News Section -->
+  <section class="news-section">
+    <h2 style="color: var(--gamboge); margin-bottom: 20px;">Latest News & Blogs</h2>
+    <div class="news-item">
+      <img src="images/School.jpeg" alt="News 1">
+      <div>
+        <h3>Ice cream and Young Enterpreneurs</h3>
+        <p><a href="https://irinjalakudalive.com/latest/entrepreneurship-development-club/" target="_blank">Read Full Article →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Video Section -->
+  <section class="video-section">
+    <h2 style="color: var(--gamboge); margin-bottom: 20px;">Instagram Highlights</h2>
+    <div class="insta-embed-wrapper">
+
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DLCF-tTBaeF/?igsh=bDl5bnc2cWt3ODBt" data-instgrm-version="14" style="background:#FFF; border:none; margin:auto;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DFKJPkFygnx/?igsh=cWJ2MGR5ejF1Y20w" data-instgrm-version="14" style="background:#FFF; border:none; margin:auto;"></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DErm92cSdAv/?igsh=ZjV0ZHE1MGdrY2Np" data-instgrm-version="14" style="background:#FFF; border:none; margin:auto;"></blockquote>
+
+    </div>
+  </section>
+  <script async defer src="https://www.instagram.com/embed.js"></script>
+
+  <div class="back-home">
+   <a href="index.html">← Back to Home</a>
+  </div>
+
+  <footer>
+    <p>Frozti 2025. All rights reserved.</p>
+  </footer>
+</body>
+</html>

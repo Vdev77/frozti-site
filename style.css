@@ -1,0 +1,254 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Color palette */
+:root {
+  --gamboge: #e49b0f;
+  --desert-sand: #edc9af;
+  --offwhite: #fdfcf9;
+}
+
+/* Header styles */
+header {
+  background: var(--offwhite);
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+  height: 50px;
+}
+
+/* Navigation bar */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: var(--gamboge);
+  color: white;
+  border-radius: 5px;
+}
+
+/* Section styling */
+.section {
+  padding: 80px 40px;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(120deg, var(--gamboge), var(--desert-sand));
+  color: white;
+}
+
+.home .text {
+  flex: 1.2;
+}
+
+.home .text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home .image-circle {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-circle img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-circle img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(255, 105, 180, 0.4), 0 0 0 4px rgba(255, 200, 230, 0.5);
+}
+
+/* About section */
+.about {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: var(--offwhite);
+}
+
+.image-rectangle {
+  width: 300px;
+  max-width: 90%;
+  margin: 20px auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-rectangle img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.image-rectangle.left-tilt:hover {
+  transform: rotate(-3deg) scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+}
+
+.image-rectangle.right-tilt:hover {
+  transform: rotate(3deg) scale(1.02);
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+}
+
+
+.about .text {
+  flex: 2;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: var(--gamboge);
+}
+
+.about-gallery {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.about-gallery img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Founders */
+.founders {
+  background: var(--desert-sand);
+}
+
+.founders h2 {
+  color: var(--gamboge);
+  margin-bottom: 20px;
+}
+/* Founders Section Styling */
+.founders {
+  padding: 60px 20px;
+  background: #EDC9AF;
+  text-align: center;
+}
+
+.founder-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.founder {
+  max-width: 160px;
+  text-align: center;
+}
+
+.founder-img {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(135deg, #ffc9de, #fff);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder-img:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4), 0 0 0 4px rgba(255, 200, 230, 0.5);
+}
+.founder-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.founder h4 {
+  margin: 8px 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #d6336c;
+}
+
+.founder p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+/* Contact */
+.contact {
+  background: var(--offwhite);
+  color: #333;
+}
+
+.contact h2 {
+  color: var(--gamboge);
+  margin-bottom: 20px;
+}
+
+.contact a {
+  color: #333;
+  text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+  background: var(--gamboge);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Parallax effect */
+section {
+  transition: transform 0.5s ease-out;
+}
